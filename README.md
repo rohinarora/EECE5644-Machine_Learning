@@ -3,3 +3,7 @@
 * [Lecture 1](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L1.md). Review of Linear Algebra
 * [Lecture 2](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L2.md). Review of Probability
 * [Lecture 3](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L3.md). Review of Optimization
+
+
+#### Reference
+https://stackoverflow.com/questions/11256433/how-to-show-math-equations-in-general-githubs-markdownnot-githubs-blog
