@@ -5,11 +5,17 @@
 * [Lecture 3](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L3). Review of Optimization
 
 
-Re: gen.py. 
-Usage- Generates images numbers from untarred scanned image DIR into markdown format. 
-python gen.py <DIR>
-Eg
+Re: ./gen.py.
+Usage- Generates images numbers from untarred scanned image DIR into markdown format.
+```
+python gen.py <DIR name>
+```
+
+Example-
+```
 python gen.py L3
+```
+
 
 #### Reference
 https://stackoverflow.com/questions/11256433/how-to-show-math-equations-in-general-githubs-markdownnot-githubs-blog :/
