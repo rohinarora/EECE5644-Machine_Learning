@@ -3,10 +3,11 @@
 * [Lecture 1](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L1). Review of Linear Algebra
 * [Lecture 2](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L2). Review of Probability
 * [Lecture 3](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L3). Review of Optimization
+* [Lecture 4](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L4). PCA. Intro to Bayesian Decision Theory
 
 
 Re: ./gen.py.
-Usage- Generates images numbers from untarred scanned image DIR into markdown format.
+Usage- Generates image numbers from untarred scanned image DIR into markdown format.
 ```
 python gen.py <DIR name>
 ```
