@@ -1,0 +1,1 @@
+Start with the sections labeled E for Estimation, then go to those labeled as D for Detection. While the two segments are relatively self contained, this order will help you follow D better, knowing the E topics.

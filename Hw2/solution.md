@@ -1,3 +1,7 @@
+**Relevant Repo**-
+https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/Hw2/
+
+
 **Answer 1**
 ![](yourscanfromsnelllibrary/image0000.jpg)
 ![](yourscanfromsnelllibrary/image0001.jpg)
@@ -11,10 +15,10 @@
 **Answer 2**
 ![](yourscanfromsnelllibrary/image0009.jpg)
 ![](yourscanfromsnelllibrary/image0010.jpg)
-Reference code- [Q2](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/Hw2/Q2.ipynb)
+Reference code for this question- [Q2_Git_repo](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/Hw2/Q2.ipynb)
 
 
 
 **Answer 3.**
 ![](yourscanfromsnelllibrary/image0008.jpg)
-Refer code for the above- [Q3](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/Hw2/Q3.ipynb)
+Reference code for this question- [Q3_Git_repo](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/Hw2/Q3.ipynb)
