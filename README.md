@@ -9,7 +9,7 @@
 * [Lecture 7](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L7). MAP with Gaussian class conditionals
 * [Lecture 8](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L8). Parametric estimation. ML, MAP with Poisson, Gamma
 * [Lecture 9](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L9). Cramer Rao lower bound. Gaussian Bayesian Estimators. Prior as regularizer.
-* [Lecture 10](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L10). Expectation Maximization. GMM
+* [Lecture 10](https://github.com/rohinarora/EECE5644-Machine_Learning/blob/master/L10). k means. Expectation Maximization. GMM. Factor analysis
 
 
 Re: ./gen.py.
