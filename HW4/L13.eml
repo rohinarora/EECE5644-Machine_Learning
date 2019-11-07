@@ -1,0 +1,252 @@
+Delivered-To: arora.roh@husky.neu.edu
+Received: by 2002:a02:cb01:0:0:0:0:0 with SMTP id j1csp143646jap;
+        Mon, 4 Nov 2019 18:13:58 -0800 (PST)
+X-Received: by 2002:a81:dd0d:: with SMTP id e13mr220311ywn.44.1572920038233;
+        Mon, 04 Nov 2019 18:13:58 -0800 (PST)
+ARC-Seal: i=3; a=rsa-sha256; t=1572920038; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=Q9gZIA3EthJrXFlWWWJd6ylaz3PCoZnvv3X5xXNu0/ztTFguAARN7H0wRF1++Rqgiz
+         85DsDm9lwmL9MGdtQ9M6pKEh0BhVABATTjdyjAp+dF8LaXkORafII76+v4AGqmFNwYWG
+         xLf2E93oaatlMc5Vy2/MSjOvEpNjscez2NH2bEDmTBkVfKTej1XxzM0dqvjZcQSxs2F/
+         9hSzbYakzwTkmtseEq2anP2hA/f99vYTLyIhnKOcTvbt9Kxw7Jl9B4jh/dsBxcwfcHef
+         MFfvm9wzIS5eDD9u5XfXtKPSr3eedlNteuOAw4dmC1jZvIp1p4jRy9Qk0hNr63J9merC
+         fkxQ==
+ARC-Message-Signature: i=3; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:reply-to:to:subject:message-id:date:from
+         :mime-version:sender:dkim-signature;
+        bh=tREOGJI7ZfiEuUwo0FqpbD8CMJv8ixlUnQPNgscRBRk=;
+        b=mTGtCYFJk2dxgS5tnmlLik79t2yssvcrhdqkrVZkKJYSqCdFrjQEtzeVl+JCVRi7LT
+         T3N94HY+GKeQxLKcHJ9hMydpPRlgjBGUkW7EdhQjAKfamvb2dBzZgVhuIWztkggwbDeo
+         WksYMZ3ZslxvjYrWS2/9Dcvx9qzUbgm7/8ljETGbEPFWCJ7r36JPkoRwhwaIOBVcL2yK
+         JWYhrvTjpFi9I5uwp1vJ3Mdx9G6zAH9io9SLy5i97LM46XuOfwATV3l6/4/cVzSPPUTv
+         xkXjyQ4d7YHuiLJZ8g41Nd2BdhIwbKfWsTYLFhoQLVXsag8q7LFHUfE4u7YquDZszmPK
+         8cSg==
+ARC-Authentication-Results: i=3; mx.google.com;
+       dkim=pass header.i=@googlegroups.com header.s=20161025 header.b=fjhlzAqS;
+       arc=pass (i=2 spf=pass spfdomain=gmail.com);
+       spf=pass (google.com: domain of eece5644+bncbcfplu6fwikbby5vqpxakgqexqpkqgq@googlegroups.com designates 209.85.220.55 as permitted sender) smtp.mailfrom=eece5644+bncBCFPLU6FWIKBBY5VQPXAKGQEXQPKQGQ@googlegroups.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=neu.edu
+Return-Path: <eece5644+bncBCFPLU6FWIKBBY5VQPXAKGQEXQPKQGQ@googlegroups.com>
+Received: from mail-sor-f55.google.com (mail-sor-f55.google.com. [209.85.220.55])
+        by mx.google.com with SMTPS id v65sor9913589ywb.13.2019.11.04.18.13.56
+        (Google Transport Security);
+        Mon, 04 Nov 2019 18:13:58 -0800 (PST)
+Received-SPF: pass (google.com: domain of eece5644+bncbcfplu6fwikbby5vqpxakgqexqpkqgq@googlegroups.com designates 209.85.220.55 as permitted sender) client-ip=209.85.220.55;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@googlegroups.com header.s=20161025 header.b=fjhlzAqS;
+       arc=pass (i=2 spf=pass spfdomain=gmail.com);
+       spf=pass (google.com: domain of eece5644+bncbcfplu6fwikbby5vqpxakgqexqpkqgq@googlegroups.com designates 209.85.220.55 as permitted sender) smtp.mailfrom=eece5644+bncBCFPLU6FWIKBBY5VQPXAKGQEXQPKQGQ@googlegroups.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=neu.edu
+ARC-Seal: i=2; a=rsa-sha256; t=1572920036; cv=pass;
+        d=google.com; s=arc-20160816;
+        b=J0E73PzjMIhu8a5H8NKD2ZxKtPOMLgmyHVGI2h1ERGUM6PtVj/HWM9ts5/I+FEuY6i
+         I61Cc++JphjUSgyAOrsEIzwrn181ipCbScmns2OSgIvM1ENakhhd4HW881CCzsq+8AXY
+         kOUQA6LikxsoOHcwK0eEWkBc7QTXNC+060F3zu4nppYQe/agZ1Q7vi7Wtk2qUnG38Su+
+         KXz4sGcMJ5wVgLVeGY7YVjN05PNJS84dAJmaBUJ9XZAK8XvNX941p8Ygcs1K4c5zu16y
+         eUI3jiiCwxNoJOP5wQBO/6Zx+VWxPEViRjKp1mQ7azyKCXKvv+iJKClYM3SS+f+AO3o4
+         bRKQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=list-unsubscribe:list-archive:list-help:list-post:list-id
+         :mailing-list:precedence:reply-to:to:subject:message-id:date:from
+         :mime-version:sender:dkim-signature;
+        bh=tREOGJI7ZfiEuUwo0FqpbD8CMJv8ixlUnQPNgscRBRk=;
+        b=ww73bIGRJk3beliJA92jRqIzACkKC5bjKJajFCJR4mU3IklmSIGR+BnlGOHiaXVlyV
+         MARghBNCHeAn1Dhc1yBXqEWS/2tS8SwU5+MkJcxhR5awK/mwK55cH5hpi81E6NUzOct2
+         Kv9eZA17tDp8Vq1gVdtFdlsHixRtxezLHWifz0BuW5NOgrLrVuzLNDkev59BznyyKpdQ
+         X0hF9tC8UqQ4TN3a1iOifiQlnOp6vFF8Fd0AujCr11U8krMwmlrUCUvC8CbXxynVfOxH
+         dQKOFDZHy8ZxhZNwDKUsED02yvpoqTSBIHqhkfjUdG+nt0qR8VRoSEGsyLpA+GR3XPyS
+         aRZQ==
+ARC-Authentication-Results: i=2; gmr-mx.google.com;
+       spf=pass (google.com: domain of derdogmus@gmail.com designates 209.85.217.52 as permitted sender) smtp.mailfrom=derdogmus@gmail.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=neu.edu
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=googlegroups.com; s=20161025;
+        h=sender:mime-version:from:date:message-id:subject:to
+         :x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:list-post:list-help:list-archive
+         :list-unsubscribe;
+        bh=tREOGJI7ZfiEuUwo0FqpbD8CMJv8ixlUnQPNgscRBRk=;
+        b=fjhlzAqSpiePcEUBKZtn6b7WiD50B8fZVSnQ8LVUwa9sFjkMNSi4VOwYovoX0/7jWa
+         1+F+Lve8TpQInuCXOt2toijenxBnPN/9YC11j8AGRzLXAlCcbXpx/D2qDFkfL5IS45pz
+         eAeYYqe37GCXON2lRCYWi+XrNaTgXyS91B0FhQgzNYTQFqASTIaDoFELx6e08uIlc741
+         Y3lpX/dcLdCsBc0Nuj5kecOYT0fmH/yEoqNh5ZG4YamEr0jjwUNfi2zgbR6CGxiSrj74
+         gy9jTQBGaBTB2v2O4OD/l7kGt3g7MCUF2DclSpbGb+IBgu/lxWy6WLsC6siS/9njsmAx
+         PG8A==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20161025;
+        h=sender:x-gm-message-state:mime-version:from:date:message-id:subject
+         :to:x-original-sender:x-original-authentication-results:reply-to
+         :precedence:mailing-list:list-id:x-spam-checked-in-group:list-post
+         :list-help:list-archive:list-unsubscribe;
+        bh=tREOGJI7ZfiEuUwo0FqpbD8CMJv8ixlUnQPNgscRBRk=;
+        b=nlrdpO1RTn2UiqkRbNx/QCHquxBnmcGNNmuTRy5Iuhl2TSbabgF1DzeD2MpL4nADyJ
+         VJXm1oVEQJO+NmOSehkQ1lHQtLIL9ekaHAvnUYFc/v6rOb8Gvbv9FeqrgEngm0UoD03/
+         52G/Qj/v/yBmpD11Ey5TcsY6p81FW2xlHmfesqsgHHX6vw1110c8cFF873lSnlh9MpmZ
+         k9IyKPLPnWodPLRlqstfKY7CbnAbw1CtTl69M0tK6EVU7Q0U1i17AABwqF3VqijVKwis
+         I6IG2XKikvHDtpXOH+9MCH1KOFduQisVvNxWwdwn48aNtQfDGSFJ5BiDGDRQF6KIwkcp
+         guwA==
+Sender: eece5644@googlegroups.com
+X-Gm-Message-State: APjAAAVabWnFZ8ymvXDWJFD6LT/9E1FCcc1qZGYHHlMdb4LtkJHvNPTh
+	1NWzvOWJk8mzuCob4dzwpLM=
+X-Google-Smtp-Source: APXvYqxIGEZTBKapQZE7bvq+ulsMzuwdk6Jwh5de7234ycQwinluI7mXSk1boBMwHRlgxvRUwXZlmQ==
+X-Received: by 2002:a81:4bd6:: with SMTP id y205mr22664126ywa.229.1572920035915;
+        Mon, 04 Nov 2019 18:13:55 -0800 (PST)
+X-BeenThere: eece5644@googlegroups.com
+Received: by 2002:a25:adcd:: with SMTP id d13ls3048418ybe.10.gmail; Mon, 04
+ Nov 2019 18:13:55 -0800 (PST)
+X-Received: by 2002:a25:bdcb:: with SMTP id g11mr26552418ybk.359.1572920035436;
+        Mon, 04 Nov 2019 18:13:55 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1572920035; cv=none;
+        d=google.com; s=arc-20160816;
+        b=Npka7w27zueoER2xIw2ZTjnGp/Xc513td+9vAKLxjmXv/PCisXl3/NG0dLZsC/pa6i
+         G7Zf6XXqw4IhbMgCXSJueIPbX09gtCdbotT6w0NVWfIZkXGSVxskNefpAA+2nYi4XNdL
+         YwCtiFIczoQIESY8WEPB7OyKPeFutVij4bzDClOciR/lNG9BwoyUXh8aUOy9ZQh9EKJQ
+         DIBmfEGNG2Z6rXi540kMSp4u2fQegpnAwppB11/Se0Kd7rAmLKew7uh4tvjKBy33x9DQ
+         Z9CKy/u8g1LsF1073xCtK7v4XltOwRseQkUR8ft0DBl6U9DbTGTqA/dSv1YznG5OtDVQ
+         q5Xg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=to:subject:message-id:date:from:mime-version;
+        bh=AnF033/SDCJDpq8Ri2iOnjKCrGZE9bC2OknXlMcv8+o=;
+        b=en6sWw6hoelMJsJ7KoF3i8cNDZtccOToq+PM+eXwl5svqYDTKqlezdH+VlnDpsVnxi
+         oEHwHtmoZ0dO6SKo02yTZ7VThCteFThzxL7CR9AA2DmcHGHiiEEzevLDceXWQmf5a1Kt
+         /Q4v0A7Kzf4wIMFS2swvCXizp3mrnavl++JJWSmNl5D14rwUPr5gQmgkRCuOAwTR/ym6
+         e0q5CiYzOfTqrEC03i8hD9heKwZzaLC/WvmMBGoFS1lVi/ac+S0vDQpgGWKGLa8Y/MFi
+         oJ0yZctHfdUUMe/Mmp54Xca+HDc4zaxZWKYCE0NT/kVoahtQJV7ZuoE0GvhHE16slrEV
+         15gA==
+ARC-Authentication-Results: i=1; gmr-mx.google.com;
+       spf=pass (google.com: domain of derdogmus@gmail.com designates 209.85.217.52 as permitted sender) smtp.mailfrom=derdogmus@gmail.com;
+       dmarc=fail (p=NONE sp=NONE dis=NONE) header.from=neu.edu
+Received: from mail-vs1-f52.google.com (mail-vs1-f52.google.com. [209.85.217.52])
+        by gmr-mx.google.com with ESMTPS id d192si1167348ywb.1.2019.11.04.18.13.55
+        for <eece5644@googlegroups.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 04 Nov 2019 18:13:55 -0800 (PST)
+Received-SPF: pass (google.com: domain of derdogmus@gmail.com designates 209.85.217.52 as permitted sender) client-ip=209.85.217.52;
+Received: by mail-vs1-f52.google.com with SMTP id 190so7876137vss.8
+        for <eece5644@googlegroups.com>; Mon, 04 Nov 2019 18:13:55 -0800 (PST)
+X-Received: by 2002:a05:6102:a17:: with SMTP id t23mr14005814vsa.121.1572920034616;
+ Mon, 04 Nov 2019 18:13:54 -0800 (PST)
+MIME-Version: 1.0
+From: Deniz Erdogmus <erdogmus@ece.neu.edu>
+Date: Mon, 4 Nov 2019 21:13:17 -0500
+Message-ID: <CAA2MJWK1_2xx6RVyZy_EYGM8YBZqiUvxjw+_2B_0ZhBP8gUgUw@mail.gmail.com>
+Subject: [EECE5644] SVM code I showed in class is uploading to gdrive...
+To: eece5644@googlegroups.com
+Content-Type: multipart/alternative; boundary="000000000000ec6b4d05968ffb1d"
+X-Original-Sender: erdogmus@ece.neu.edu
+X-Original-Authentication-Results: gmr-mx.google.com;       spf=pass
+ (google.com: domain of derdogmus@gmail.com designates 209.85.217.52 as
+ permitted sender) smtp.mailfrom=derdogmus@gmail.com;       dmarc=fail (p=NONE
+ sp=NONE dis=NONE) header.from=neu.edu
+Reply-To: eece5644@googlegroups.com
+Precedence: list
+Mailing-list: list eece5644@googlegroups.com; contact eece5644+owners@googlegroups.com
+List-ID: <eece5644.googlegroups.com>
+X-Spam-Checked-In-Group: eece5644@googlegroups.com
+X-Google-Group-Id: 264775978092
+List-Post: <https://groups.google.com/group/eece5644/post>, <mailto:eece5644@googlegroups.com>
+List-Help: <https://groups.google.com/support/>, <mailto:eece5644+help@googlegroups.com>
+List-Archive: <https://groups.google.com/group/eece5644
+List-Unsubscribe: <mailto:googlegroups-manage+264775978092+unsubscribe@googlegroups.com>,
+ <https://groups.google.com/group/eece5644/subscribe>
+
+--000000000000ec6b4d05968ffb1d
+Content-Type: text/plain; charset="UTF-8"
+
+Hello.
+
+Homework 4 is relatively straightforward conceptually but I anticipate
+people will have confusion in some aspects.
+
+Here are some hints to help you get started.
+
+Q1 - this is an exercise that shows you how to apply clustering to the
+problem of image segmentation. K-means, GMM, or your favorite clustering
+algorithm can be used in the same fashion essentially to get a basic image
+segmentation solution.
+
+The key is to extract good features for each pixel. In this problem, for
+simplicity, the feature vector contains 2-dimensional position coordinates
+and 3-dimensional color coordinates in RGB for each pixel. Normally we
+would not expect this feature vector to give good segmentation results for
+natural images, since a pixel's segment may depend on texture and other
+features that depend no only on the pixel itself but its neighbors. Keep in
+mind that this is an illustration only.
+
+Normalizing each feature to the unit interval brings all feature vectors
+into the unit 5-dimensional hypercube. This normalization prevents
+Euclidean distance based K-means clustering to overly emphasize position
+over color (since row/column indices would be integers and RGB values would
+be between [0,1] not making an impact on Euclidean distances computed.
+
+
+Q2 is similar to the SVM example we studied in class. Use cross-validation
+to set hyperparameters, then train your SVM with best hyperparameters, then
+apply it to test data. You need to change the class conditional data
+distributions and generate samples accordingly, but I don't expect that to
+be a major challenge.
+
+Make sure you perform crossvalidation properly. Make your grid search work
+with a denser grid than what the example code shows.
+
+See me at the office periods that will be on google calendar.
+Enjoy.
+Deniz
+
+
+Deniz Erdogmus
+Northeastern University
+
+-- 
+You received this message because you are subscribed to the Google Groups "EECE5644" group.
+To unsubscribe from this group and stop receiving emails from it, send an email to eece5644+unsubscribe@googlegroups.com.
+
+--000000000000ec6b4d05968ffb1d
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div>Hello.</div><div><br></div><div>Homework 4 is relativ=
+ely straightforward conceptually but I anticipate people will have confusio=
+n in some aspects.</div><div><br></div><div>Here are some hints to help you=
+ get started.</div><div><br></div><div>Q1 - this is an exercise that shows =
+you how to apply clustering to the problem of image segmentation. K-means, =
+GMM, or your favorite clustering algorithm can be used in the same fashion =
+essentially to get a basic image segmentation solution.</div><div><br></div=
+><div>The key is to extract good features for each pixel. In this problem, =
+for simplicity, the feature vector contains 2-dimensional position coordina=
+tes and 3-dimensional color coordinates in RGB for each pixel. Normally we =
+would not expect this feature vector to give good segmentation results for =
+natural images, since a pixel&#39;s segment may depend on texture and other=
+ features that depend no only on the pixel itself=C2=A0but its neighbors. K=
+eep in mind that this is an illustration only.=C2=A0</div><div><br></div><d=
+iv>Normalizing each feature to the unit interval brings all feature vectors=
+ into the unit 5-dimensional hypercube. This normalization prevents Euclide=
+an distance based K-means clustering to overly emphasize position over colo=
+r (since row/column indices would be integers and RGB values would be betwe=
+en [0,1] not making an impact on Euclidean distances computed.=C2=A0</div><=
+div><br></div><div><br></div><div>Q2 is similar to the SVM example we studi=
+ed in class. Use cross-validation to set hyperparameters, then train your S=
+VM with best hyperparameters, then apply it to test data. You need to chang=
+e the class conditional data distributions and generate samples accordingly=
+, but I don&#39;t expect that to be a major challenge.</div><div><br></div>=
+<div>Make sure you perform crossvalidation properly. Make your grid search =
+work with a denser grid than what the example code shows.</div><div><br></d=
+iv><div>See me at the office periods that will be on google calendar.</div>=
+<div>Enjoy.</div><div>Deniz</div><div><br></div><br clear=3D"all"><div><div=
+ dir=3D"ltr" class=3D"gmail_signature" data-smartmail=3D"gmail_signature"><=
+div dir=3D"ltr"><div><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><di=
+v dir=3D"ltr"><span style=3D"font-size:x-small">Deniz Erdogmus</span><br></=
+div><div dir=3D"ltr"><font size=3D"1">Northeastern University<br></font></d=
+iv></div></div></div></div></div></div></div></div>
+
+<p></p>
+
+-- <br />
+You received this message because you are subscribed to the Google Groups &=
+quot;EECE5644&quot; group.<br />
+To unsubscribe from this group and stop receiving emails from it, send an e=
+mail to <a href=3D"mailto:eece5644+unsubscribe@googlegroups.com">eece5644+u=
+nsubscribe@googlegroups.com</a>.<br />
+
+--000000000000ec6b4d05968ffb1d--
